@@ -1,0 +1,12 @@
+[
+    {
+        "Tipo" : "BASIC",
+        "Incluido" : "Medicamentos en Asistencias con Hospitalización, Repatriación Sanitaria, Acompañamiento de Menores y Mayores, Localización de equipajes, Incluye Telemedicina(Covid-19)",
+        "Monto" : "Hasta USD 60.000"
+
+    },
+    { "Tipo" : "PREMIUM", 
+        "Incluido" : "Incluye COVID EXTRA: garantía por cancelación o interrupción de viaje frente a Covid-19, Medicamentos en Asistencias con Hospitalización, Repatriación Sanitaria, Acompañamiento de Menores y Mayores, Localización de equipajes, Incluye Telemedicina(Covid-19)",
+        "Monto" : "Hasta USD 150.000"
+    }
+]

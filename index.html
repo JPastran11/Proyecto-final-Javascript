@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css"/>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Formulario</title>
+</head>
+<body onload="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top" >
+    <button class="navbar-toggler" type="button" ></button>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+      <div class="navbar-nav ml-auto" >
+        <a class="nav-item nav-link" href="#header">COTIZA AHORA!</a>
+        <a class="nav-item nav-link" href="#testimonial2">ASEGURA TU VIAJE!</a>
+        <a class="nav-item nav-link" href="#testimonial3">TESTIMONIO!</a>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+  <section id="info-one">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4 col-sm-12">
+          <span class="imagen1" onClick="updateCounter(event)">
+            <img class="d-block w-100" src="./images/sector4.jpg">
+          </span>
+        </div>
+        <div class="col-md-4 my-auto">
+          <span class="imagen2" onClick="updateCounter(event)">
+            <img class="d-block w-100" src="./images/sector5.jpg">
+          </span>
+        </div>
+        <div class="col-md-4 my-auto">
+          <span class="imagen3" onClick="updateCounter(event)">
+          <img class="d-block w-100" src="./images/sector6.jpg">
+        </span>
+      </div>
+    </div>
+  </section>
+  <br>
+  <hr>
+ 
+      <section id="testimonial">
+        <div class="container">
+         <form action="https://reqres.in/api/users" method="POST" id="formulario">
+          <p><b>Suscribete para recibir novedades!</b></p>Nombre: <input type="text" name="nameUsers" />
+          Email: <input type="email" name="emailUsers" />
+          <input type="submit" id="botonn" value="Registrarse"/></div>
+        </form>
+        
+      <br>
+      </section>
+      <hr>
+    </div>
+  </section>
+<section id="header">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-2">
+        <span class="imagen3" onClick="updateCounter(event)">
+          <img class="d-block w-100" src="./images/uber.jpg"></span>
+
+          <span class="imagen3" onClick="updateCounter(event)">
+          <img class="d-block w-100" src="./images/uber2.jpg"></span>
+          </div>
+        <div class="col-md-5">
+          <div class="header-content-left">
+            <h2>Solicita aqui tu Presupuesto!</h2>
+            <form method="get">
+                <fieldset>
+                    <legend>Datos Viajero</legend>
+                    <p><label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="20" onchange="Saludo()" required/></p>
+                    
+                  
+                    <p><label for="telefono">Telefono</label>
+                    <input type="number" id="telefono" name="telefono" required/></p>
+                    
+                  
+                    <p><label for="email">Email de contacto</label>
+                    <input type="text" id="email" name="email"  required/></p>
+                    
+                    </fieldset>
+              
+                
+                    <div><p class="nombre"></p>
+                    <p class="telefono"></p>
+                    <p class="email"></p></div>
+                    
+        
+                <fieldset>
+                    <legend>Elige tu ruta</legend>
+                    <h2>¿Donde quieres realizar tus vacaciones?</h2>
+                    <input type="radio" name="ciudades" id="barcelona" value="Europa" checked /> Europa 
+                    <input type="radio" name="ciudades" id="paris" value="EEUU" /> EEUU 
+                    <input type="radio" name="ciudades" id="amsterdam" value="Caribe" /> Caribe 
+        
+                    <h2>Duracion</h2>
+                    <div><input type="radio" name="duracion" id="dias" value="dias" checked /> Dias </div>
+                    <div><input type="radio" name="duracion" id="semanas" value="semanas" /> Semanas </div>
+                    <div><input type="radio" name="duracion" id="meses" value="meses"  /> Meses </div>
+        
+                    <h2>Servicios Adicionales</h2>
+                    
+                    <div><input type="checkbox" name="servicios[]" id="audioguia" value="audioguia" required/> Audioguia </div>
+                    <div><input type="checkbox" name="servicios[]" id="nohospedaje" value="nohospedaje" required/>Sin Hospedaje </div>
+                    <div><input type="checkbox" onclick="ObjetoDos()" required/> Solo Desayuno </div>
+                    <div><input type="checkbox" onclick="Objeto()" required/> Full Day </div>
+                </fieldset>
+                
+                <div><input type="button" id="boton" value="Enviar" onclick=" recogerDatos()" /> <input type="reset" value="Borrar" /></div>
+               
+                
+                
+            </form>
+        </form>
+          </div>  
+        </div>
+        
+        <div class="col-md-5">
+          <div class="header-content-right">
+           
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./images/image.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/image2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./images/image3.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+        <section id="testimonial2">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-md-12 col-sm-12">
+        <h2>Cotiza tu Seguro de Viaje!</h2>
+                <div class="formulario2">
+                  <form>
+                    <div id="msj-error-cotizador"></div>
+                    <div class="campo">
+                      <label>Region a Viajar</label>
+                      <select name="region" id="region">
+                        <option value="">--Selecciones--</option>
+                        <option value="Europa">Europa</option>
+                        <option value="EEUU">EEUU</option>
+                        <option value="Caribe">Caribe</option>
+                      </select>
+                    </div>
+                <div class="campo">
+                  <label>Epoca del Viaje</label> 
+                  <select name="epoca" id="epoca">
+                    <option value="">--Selecciones--</option>
+                    <option value="Verano">Verano</option>
+                    <option value="Otoño">Otoño</option>
+                    <option value="Primavera">Primavera</option>
+                    <option value="Invierno">Invierno</option>
+
+                  </select>   
+                </div>
+
+                <div class="campo">
+                  <label>Plan de Viaje</label>
+                  <input type="radio" name="plan" value="Basico" class="radio" id="basico">Basico(Incluye Test Covid-19)
+                  <input type="radio" name="plan" value="Completo" class="radio" id="completo">Premium
+                </div>
+               <input type="button" class="button-primary u-full-width" value="Cotizar" onclick="cotizarSeguro()"/>        
+               <div class="mensaje" id="msj">Cotiza ahora y obtene hasta un 20% de descuento!</div>
+               <div id="resumen" style="display: none;"></div>
+               <div class="" id="resultado" style="display: none;"></div>
+              </div>
+            </form>
+            </div>
+            </div>
+          </section>
+    </section>
+  </section>
+  <section id="testimonial4">
+  <div class="container">
+    <div class="section">
+      <div><button  id="json">Mostrar Cobertura de Asistencia</button></div>
+      <table align="center">
+        <thead>
+          <tr>
+            <th>Tipo de Asistencia</th>
+            <th>Incluído en tu ASSIST CARD</th>
+            <th>Monto Cobertura Global</th>
+          </tr>
+        </thead>
+        <tbody id="res">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+  <section id="info-one">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4 col-sm-12">
+          <span class="imagen4" onClick="updateCounter(event)">
+            <img class="d-block w-100"  src="./images/sector1.jpg">
+          </span>
+        </div>
+        <div class="col-md-4 my-auto">
+          <span class="imagen5" onClick="updateCounter(event)">
+            <img class="d-block w-100" src="./images/sector2.jpg">
+          </span>
+        </div>
+        <div class="col-md-4 my-auto">
+          <span class="imagen6" onClick="updateCounter(event)">
+          <img class="d-block w-100" src="./images/sector3.jpg">
+        </span>
+      </div>
+    </div>
+  </section>
+<br>
+<section id="testimonial3">
+  <div class="container">
+    <p class="efecto">
+      «Viajar es un ejercicio con consecuencias fatales para los prejuicios, la intolerancia y la estrechez de mente».
+    </p>
+    <p class="h4">- Mark Twain</p>
+  </div>
+</section>
+  <section id="testimonial">
+    <div class="container"></div>
+    <span class="imagen3" onClick="updateCounter(event)">
+      <img class="d-block w-100" src="./images/uber3.jpg">
+      </span>
+    </div>
+  </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+ 
+
+
+
+</body>
+</html>
